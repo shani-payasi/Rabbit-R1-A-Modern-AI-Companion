@@ -65,7 +65,7 @@ const Footer = () => {
   };
 
   return (
-    <main className="relative bg-gray-900 min-h-screen flex items-center justify-center overflow-hidden font-sans p-4">
+    <main className="relative bg-gray-900 min-h-screen flex items-center justify-center overflow-hidden  font-sans p-4">
       <h1 className="theme-font absolute text-center text-[25vw] lg:text-[20vw] font-normal text-[#e47d4e] select-none z-0 leading-none opacity-50 mix-blend-difference" >
         RABBIT R1
       </h1>
