@@ -1,13 +1,15 @@
 import { FaPlayCircle } from "react-icons/fa";
 import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
-import CircularText from "./components/CircularText";
-import DarkVeil from "./components/DarkVeil";
-import ImageTrail from "./components/ImageTrail";
+import CircularText from './components/CircularText';
+import DarkVeil from './components/DarkVeil';
+import ImageTrail from './components/ImageTrail';
 import './App.css';
 import GlassyNavBar from './components/GlassyNavBar';
 import AnimatedImage from './components/AnimatedImage';
 import HeroText from "./components/HeroText";
+import HeroVideo from "./components/HeroVideo";
+import FeatureSection from "./components/FeatureSection";
 
 function App() {
   useEffect(() => {
@@ -62,7 +64,7 @@ function App() {
               ]}
               renderImageWidth={100}
               rotationRange={10}
-              variant="vertical"
+              variant={2}
             />
           </div>
 
@@ -108,6 +110,8 @@ function App() {
         {/* HeroText Component */}
 
         <HeroText />
+        <HeroVideo />
+        <FeatureSection />
         {/* 🧪 Dummy Scroll Section to Ensure Scrolling */}
         <div className="h-[150vh] bg-[#111] flex items-center justify-center">
           <h2 className="text-white text-3xl">SCROLL IS WORKING ✅</h2>
