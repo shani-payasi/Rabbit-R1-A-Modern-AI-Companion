@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import  { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 
 const getResponsiveWidth = () => {
@@ -7,7 +7,7 @@ const getResponsiveWidth = () => {
   return '50vw';
 };
 
-const GlassyNavBar = () => {
+const GlassyNavBar = ({  onDiscover, onInfoClick, onBuyClick }) => {
   const navRef = useRef(null);
   const contentRef = useRef(null);
   const [showContent, setShowContent] = useState(false);
@@ -87,30 +87,30 @@ const GlassyNavBar = () => {
             >
               <span className="text-[#fff] font-normal  text-base sm:text-lg">R</span>
             </div>
-                 <div className="flex flex-wrap space-x-1">
-            <button className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300 text-sm sm:text-base">
-              INFO
-            </button>
-            <button className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300 text-sm sm:text-base">
-              BUY
-            </button>
-          </div>
+            <div className="flex flex-wrap space-x-1">
+              <button 
+              onClick={onInfoClick}
+              className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full border-1 border-transparent cursor-pointer  text-white hover:border-1 hover:border-dashed hover:border-[#ec5a16] hover:bg-opacity-10 transition-all duration-300 text-sm sm:text-base" >
+                INFO
+              </button>
+              <button
+              onClick={onBuyClick}
+              className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full text-whiterounded-full border-1 border-transparent cursor-pointer  text-white hover:border-1 hover:border-dashed hover:border-[#ec5a16] hover:bg-opacity-10 transition-all duration-300 text-sm sm:text-base" >
+                BUY
+              </button>
+            </div>
           </div>
 
-          {/* Navigation Items */}
-     
-
-          {/* Right Side Items */}
           <div className="flex flex-wrap items-center space-x-1 sm:space-x-2 mt-1 sm:mt-0">
             <button 
-              className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full text-white transition-all duration-300 text-sm sm:text-base"
+              className="nav-item px-2 sm:px-4 py-1 sm:py-2 rounded-full hover:bg-[#ec5a16] cursor-pointer  text-white transition-all duration-300 text-sm sm:text-base"
               style={{
                 border: '1px dashed rgba(255, 255, 255, 0.5)'
               }}
+              onClick={onDiscover}
             >
               DISCOVER 
             </button>
-        
             <button className="nav-item w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-20 transition-all duration-300">
               #
             </button>

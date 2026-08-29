@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import { Plus, Zap, Aperture } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -32,8 +32,8 @@ useEffect(() => {
         trigger: sectionRef.current,
         start: 'top 60%',
         end: '80% 30%',
-        scrub: true, // Enables scroll syncing
-        // markers: true // Optional: for debugging
+        scrub: true, 
+        // markers: true 
       }
     });
 
@@ -62,7 +62,6 @@ useEffect(() => {
   return (
     <section ref={sectionRef} id='info' className="bg-[#111111] text-white font-sans py-16 px-4 md:py-24 md:px-8">
       <div className="max-w-6xl mx-auto theme-font font-light">
-        {/* Added a class for GSAP to target the heading */}
         <div className="max-w-3xl main-heading-anim">
           <h1 className="text-4xl md:text-5xl leading-tight">
             Our team
@@ -121,7 +120,6 @@ useEffect(() => {
           <p className="text-2xl text-gray-400 mt-4">Smarter. Simpler. Always with you.</p>
         </div>
 
-        {/* Added "feature-card" class to all cards for GSAP targeting */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="bg-[#E0E8F0] text-black rounded-2xl p-6 flex flex-col justify-between h-[400px] feature-card">
             <div>

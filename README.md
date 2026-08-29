@@ -1,37 +1,77 @@
-# Sheryians Cohort Hackathon Project
 
-## Overview
-This is the frontend repository for the Sheryians Cohort Hackathon project. The project demonstrates modern web development practices and showcases the skills learned during the cohort.
 
-## Features
-- Modern web interface
-- Responsive design
-- Interactive user experience
+# Rabbit R1 – A Modern AI Companion 🐰
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- React.js (if applicable)
+A sleek, animated landing page for the **Rabbit R1** – a conceptual AI device. Created during the **Sheryians Cohort Hackathon**, this project delivers a visually engaging and interactive experience using modern web technologies.
 
-## Getting Started
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start development server: `npm start`
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+## ✨ Features
 
-## Project Structure
+* 🎮 **3D Device Viewer** with [Spline](https://spline.design/)
+* 🎞️ **GSAP Animations** for scroll effects & transitions
+* 🌀 **Smooth Scrolling** using [Lenis](https://lenis.studiofreight.com/)
+* 🖱️ **Dynamic Image Trail** that follows cursor movement
+* 🧩 **Component-Based UI** with React
+* 📱 **Fully Responsive** design with Tailwind CSS
+
+## 🛠️ Tech Stack
+
+| Category       | Tools & Libraries                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| **Framework**  | [React.js](https://react.dev/)                                                                |
+| **Styling**    | [Tailwind CSS](https://tailwindcss.com/)                                                      |
+| **Animation**  | [GSAP](https://gsap.com/), [Framer Motion](https://www.framer.com/motion/)                    |
+| **3D Viewer**  | [@splinetool/react-spline](https://github.com/splinetool/react-spline)                        |
+| **Scrolling**  | [Lenis](https://lenis.studiofreight.com/)                                                     |
+| **Icons**      | [React Icons](https://react-icons.github.io/react-icons/), [Lucide React](https://lucide.dev) |
+| **UI Library**      | [React Bits](https://reactbits.dev/) |
+| **Build Tool** | [Vite](https://vitejs.dev/)                                                                   |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure **Node.js** and **npm** (or yarn/pnpm) are installed.
+
+### Installation
+
+```bash
+git clone https://github.com/developerchetram/sheryians_hackathon.git
+cd sheryians_hackathon/
+npm install     # or yarn install
+npm run dev     # Runs the local server at http://localhost:5173
 ```
-frontend/
-├── src/
-├── public/
-└── README.md
+
+## 📁 Project Structure
+
+```
+├── public/              # Static assets
+├── src/                 # Source code
+│   ├── components/      # Reusable components (Navbar, Products, etc.)
+│   ├── App.jsx          # Main App component
+│   ├── index.css        # Global styles
+│   └── main.jsx         # Entry point
+├── package.json
+└── index.html
 ```
 
-## Contributing
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+## 🤝 Contributing
 
-## Authors
-- Your Name
+Your ideas and improvements are welcome!
 
-## License
-This project is licensed under the MIT License - see the LICENSE.md 
+```bash
+# Fork → Clone → Create Branch → Commit → Push → PR
+git checkout -b feature/YourFeature
+```
+
+## 👤 Author
+
+**Chetram Patel** – [GitHub](https://github.com/DeveloperChetram)
+
+## 📄 License
+
+Licensed under the **MIT License** – see [LICENSE.md](LICENSE.md) for details.
+
+---
