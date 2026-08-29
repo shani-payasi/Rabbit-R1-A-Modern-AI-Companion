@@ -1,16 +1,37 @@
-# React + Vite
+# Sheryians Cohort Hackathon Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Overview
+This is the frontend repository for the Sheryians Cohort Hackathon project. The project demonstrates modern web development practices and showcases the skills learned during the cohort.
 
-Currently, two official plugins are available:
+## Features
+- Modern web interface
+- Responsive design
+- Interactive user experience
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- React.js (if applicable)
 
-## React Compiler
+## Getting Started
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm start`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
+```
+frontend/
+├── src/
+├── public/
+└── README.md
+```
 
-## Expanding the Oxlint configuration
+## Contributing
+Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Authors
+- Your Name
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md 

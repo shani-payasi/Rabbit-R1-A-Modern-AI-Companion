@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Plus, Zap, ArrowRight } from 'lucide-react';
+import { Plus, Zap, Aperture } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -31,7 +31,7 @@ useEffect(() => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top 60%',
-        end: 'bottom 30%',
+        end: '80% 30%',
         scrub: true, // Enables scroll syncing
         // markers: true // Optional: for debugging
       }
@@ -60,7 +60,7 @@ useEffect(() => {
 
 
   return (
-    <section ref={sectionRef} className="bg-[#111111] text-white font-sans py-16 px-4 md:py-24 md:px-8">
+    <section ref={sectionRef} id='info' className="bg-[#111111] text-white font-sans py-16 px-4 md:py-24 md:px-8">
       <div className="max-w-6xl mx-auto theme-font font-light">
         {/* Added a class for GSAP to target the heading */}
         <div className="max-w-3xl main-heading-anim">
@@ -127,12 +127,28 @@ useEffect(() => {
             <div>
               <SparkIcon className="text-[#FF4D24] w-10 h-10 mb-4" />
               <div className="flex space-x-2">
-                <span className="bg-[#FF4D24] text-white text-sm font-semibold px-4 py-2 rounded-lg">AI</span>
-                <span className="bg-[#FF4D24] text-white text-sm font-semibold px-4 py-2 rounded-lg">Voice</span>
+                <span className="blink-effect text-sm font-semibold px-4 py-2 rounded-lg">AI</span>
+                <span className="blink-effect text-sm font-semibold px-4 py-2 rounded-lg">Voice</span>
               </div>
+              <style jsx>{`
+                @keyframes blinkEffect {
+                  0%, 100% { 
+                    background-color: #FF4D24;
+                    color: white;
+                  }
+                  50% {
+                    background-color: #808080;
+                    color: white;
+                  }
+                }
+                
+                .blink-effect {
+                  animation: blinkEffect 1s steps(2, start) infinite;
+                }
+              `}</style>
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Natural voice control</h3>
+              <h3 className="text-2xl font-normal">Natural voice control</h3>
               <p className="text-gray-600 mt-1">Command apps, schedule tasks, or message friends — all hands-free.</p>
             </div>
           </div>
@@ -140,38 +156,59 @@ useEffect(() => {
           <div className="flex flex-col items-center text-center mt-10 feature-card">
             <div className="w-full bg-[#E0E8F0] rounded-2xl flex flex-col h-[400px]">
               <div className="bg-[#FF4D24] text-white flex justify-between items-center px-6 py-3 rounded-t-2xl">
-                <span className="font-bold">EXPLORE</span>
-                <ArrowRight />
+                <span className="font-bold">QUICK ACCESS</span>
+<Aperture className="animate-spin" style={{ animationDuration: '3s' }} />
               </div>
               <div className="flex-grow flex flex-col justify-center items-center p-6 relative">
                 <div className="relative">
                   <SparkIcon className="text-[#FF4D24] w-12 h-12" />
                   <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-32 h-16 bg-gray-400 rounded-t-full border-b-4 border-gray-500"></div>
                 </div>
-                <div className="mt-8 border-2 border-red-500 text-red-500 font-bold px-6 py-2 rounded-full">
+                <div className="mt-8 border-2 border-red-500 text-red-500 font-bold px-6 py-2 rounded-full animate-pulse-shadow relative hover:scale-105 transition-transform">
                   AI in action
+                  <style jsx>{`
+                    @keyframes pulseShadow {
+                      0% {
+                        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+                      }
+                      50% {
+                        box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+                      }
+                      100% {
+                        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+                      }
+                    }
+                    .animate-pulse-shadow {
+                      animation: pulseShadow 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+                      transition: all 0.3s ease;
+                    }
+                    .animate-pulse-shadow:hover {
+                      box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+                      animation-duration: 1s;
+                    }
+                  `}</style>
                 </div>
               </div>
             </div>
             <div className="mt-4 w-full">
-              <h3 className="text-2xl font-bold">Real-time assistance</h3>
-              <p className="text-gray-400 mt-1 w-full ">Get instant help navigating apps, booking rides, or searching — all in one step.</p>
+              <h3 className="text-2xl font-medium">Real-time assistance</h3>
+              <p className="text-gray-400 mt-1 w-full mb-5 ">Get instant help navigating apps, booking rides, or searching — all in one step.</p>
             </div>
           </div>
 
           <div className="bg-[#E0E8F0] text-black rounded-2xl -mt-10 p-6 flex flex-col justify-between h-[400px] relative overflow-hidden feature-card">
-            <div className="absolute top-20 -right-5 transform -rotate-12 bg-gray-300 px-4 py-1 rounded-full text-gray-600">Smart</div>
+            <div className="absolute top-20 -right-5 transform -rotate-12 bg-[#FF4D24] px-4 py-1 rounded-full text-white">Smart</div>
             <div className="absolute top-32 right-10 transform rotate-12 bg-gray-300 px-4 py-1 rounded-full text-gray-600">Daily</div>
             <div className="absolute top-48 -right-2 transform -rotate-6 bg-gray-300 px-4 py-1 rounded-full text-gray-600">Auto</div>
             <div className="flex-grow flex justify-center items-center">
-              <div className="w-48 h-48 border-2 border-gray-400 rounded-full flex justify-center items-center relative">
+              <div className="w-48 h-48 border-2 border-gray-400 rounded-full flex justify-center items-center relative animate-spin" style={{ animationDuration: '10s' }}>
                 <SparkIcon className="text-[#FF4D24] w-12 h-12" />
-                <p className="absolute text-gray-400 font-bold" style={{top: '-10px'}}>Smart</p>
-                <p className="absolute text-gray-400 font-bold" style={{bottom: '-10px'}}>Agent</p>
+                <p className="absolute text-gray-400 font-medium" style={{top: '-10px'}}>Smart</p>
+                <p className="absolute text-gray-400 font-medium" style={{bottom: '-10px'}}>Agent</p>
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Personalized automation</h3>
+              <h3 className="text-2xl font-medium">Personalized automation</h3>
               <p className="text-gray-600 mt-1">Learns your habits to handle routine tasks before you even ask.</p>
             </div>
           </div>
