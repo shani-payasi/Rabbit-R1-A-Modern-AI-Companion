@@ -29,7 +29,7 @@ const HeroText = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className='hero-text border-2  w-full  flex   items-center text-white justify-between  p-10' >
+    <div ref={heroRef} className='hero-text   w-full  flex   items-center text-white justify-between  p-10' >
      
     <div className="section section-1 p-6 md:p-12 theme-font w-[50%]">
   <h2 className="text-3xl md:text-4xl font-midium mb-4">

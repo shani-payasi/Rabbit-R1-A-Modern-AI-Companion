@@ -13,6 +13,7 @@ import HeroVideo from "./components/HeroVideo";
 import FeatureSection from "./components/FeatureSection";
 import Products from "./components/Products";
 
+
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -91,7 +92,7 @@ function App() {
         </section>
 
         {/* Play Circle + Circular Text */}
-          <div className='cercular-text absolute w-full h-[200px] border-2 border-white top-[400px]'>
+          <div className='cercular-text absolute w-full h-[200px]  top-[400px]'>
           <div className='absolute w-[200px] h-[200px] bottom-5 right-5'>
             <CircularText
               text="RABBIT R1 * RABBIT R1 * RABBIT R1 * "
@@ -114,6 +115,7 @@ function App() {
         <HeroText />
         <HeroVideo />
         <FeatureSection />
+
 
 
         <Products />
