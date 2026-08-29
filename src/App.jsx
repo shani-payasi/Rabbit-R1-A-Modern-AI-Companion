@@ -1,3 +1,4 @@
+
 import { FaPlayCircle } from "react-icons/fa";
 import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
@@ -10,6 +11,7 @@ import AnimatedImage from './components/AnimatedImage';
 import HeroText from "./components/HeroText";
 import HeroVideo from "./components/HeroVideo";
 import FeatureSection from "./components/FeatureSection";
+import Products from "./components/Products";
 
 function App() {
   useEffect(() => {
@@ -112,6 +114,9 @@ function App() {
         <HeroText />
         <HeroVideo />
         <FeatureSection />
+
+
+        <Products />
         {/* 🧪 Dummy Scroll Section to Ensure Scrolling */}
         <div className="h-[150vh] bg-[#111] flex items-center justify-center">
           <h2 className="text-white text-3xl">SCROLL IS WORKING ✅</h2>

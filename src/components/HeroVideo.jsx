@@ -27,8 +27,8 @@ const HeroVideo = () => {
     
       tl.fromTo(
         videoRef.current,
-        { scale: 0.9,  },
-        { scale: 1, duration: 1 } 
+        { scale: 0.9, filter: 'blur(5px)' },
+        { scale: 1, filter: 'blur(0px)', duration: 1 } 
       );
 
       
